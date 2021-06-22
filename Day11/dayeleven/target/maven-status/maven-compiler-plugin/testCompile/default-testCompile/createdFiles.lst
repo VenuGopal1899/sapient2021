@@ -1,0 +1,7 @@
+junit5\test\MockitoVerifyTest.class
+junit5\test\ServiceDatabaseIdTest.class
+junit5\test\unittest\audio\test\VolumeUtilTests.class
+junit5\test\ServiceTest.class
+junit5\test\injectexample\test\ArticleManagerTest.class
+junit5\test\MockitoWhenExampleTest.class
+junit5\test\unittest\audio\test\ConfigureThreadingUtilTests.class
