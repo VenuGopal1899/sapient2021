@@ -1,0 +1,4 @@
+jpatraining\dao\MemberDAO.class
+jpatraining\entities\Member.class
+jpatraining\dao\MemberDAOImpl.class
+jpatraining\app\MemberApp.class
