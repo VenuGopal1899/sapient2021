@@ -19,8 +19,8 @@ public class MemberServiceImpl implements MemberService {
 	public boolean isMemberAvailable(int memberId) {
 		// TODO Auto-generated method stub
 		boolean isMemberAvailable;
-		memberdao.isMemberAvailable(memberId);
-		return false;
+		isMemberAvailable= memberdao.isMemberAvailable(memberId);
+		return isMemberAvailable;
 	}
 
 	@Override
