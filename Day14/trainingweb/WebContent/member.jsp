@@ -30,9 +30,9 @@
 
 								<!-- Text input-->
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="name">Name</label>
+									<label class="col-md-4 control-label" for="memberid">Member Id</label>
 									<div class="col-md-4">
-										<input id="name" name="name" type="text" placeholder=""
+										<input id="memberid" name="name" type="text" placeholder=""
 											class="form-control input-md">
 
 									</div>
@@ -40,23 +40,23 @@
 
 								<!-- Text input-->
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="surname">Surname</label>
+									<label class="col-md-4 control-label" for="membername">Member Name</label>
 									<div class="col-md-4">
-										<input id="surname" name="surname" type="text" placeholder=""
+										<input id="membername" name="membername" type="text" placeholder=""
 											class="form-control input-md">
 
 									</div>
 								</div>
 
 								<!-- Text input-->
-								<div class="form-group">
+							<!-- 	<div class="form-group">
 									<label class="col-md-4 control-label" for="salary">Salary</label>
 									<div class="col-md-4">
 										<input id="salary" name="salary" type="number" placeholder=""
 											class="form-control input-md">
 
 									</div>
-								</div>
+								</div> -->
 
 								<!-- Button -->
 								<div class="form-group">
@@ -80,21 +80,21 @@
 							<table id="example" class="table table-striped table-bordered">							
 							<thead>
 								<tr>
-									<th>Name</th>
-									<th>Surname</th>
-									<th>Salary</th>
+									<th>Member Id</th>
+									<th>Member Name</th>
+									<!--  <th>Salary</th>-->
 									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
 
 
-								<c:forEach items="${allMembers}" var="employee">
+								<c:forEach items="${allMembers}" var="member">
 									<tr>
-										<td><c:out value="${employee.name}" /></td>
-										<td><c:out value="${employee.surname}" /></td>
-										<td><c:out value="${employee.salary}" /></td>
-										<td><a href="employeeController?employeeId=${employee.id}"
+										<td><c:out value="${member.id}" /></td>
+										<td><c:out value="${member.memberName}" /></td>
+										<!-- <td><c:out value="${employee.salary}" /></td> -->
+										<td><a href="memberServlet?id=${member.id}"
 											class="btn btn-danger" type="button">Delete</a></td>
 									</tr>
 								</c:forEach>
