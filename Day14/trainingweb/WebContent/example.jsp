@@ -1,17 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import = "java.util.Date" %>
+ 
 
-
-<%@ page errorPage="error.jsp"%> 
-<%@ include file="header.jsp"%> <!-- Static include -->
-<jsp:include page="header.jsp"> <!-- Dynamic include -->
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ tagliburi="WEB-INF/" prefix="prefix for our custom tag" %>
-<!--  Decalration Tag this tag is placed outside the _jspService method . It creates only one object for multiple requests-->
-<%! %>
-<!-- Expression tag -->
-<%="Current time is "+ java.util.Calendar.getInstance().getTime() + request.getParameter("nameOfServer") %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,6 +25,7 @@ System.out.println("Current Date= "+d);
 </tr>
 <td> Password </td>
 <td><input type="password" name="password" /></td>
+<td><a class="btn btn-danger" type="button">Add</a></td>
 </tr>
 </table>
 </form>

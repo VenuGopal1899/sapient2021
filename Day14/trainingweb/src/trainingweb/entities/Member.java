@@ -3,9 +3,12 @@
  */
 package trainingweb.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 /**
  * @author admi
@@ -19,7 +22,12 @@ public class Member {
 	private int id;
 	@Column(name = "membername")
 	private String memberName;
-
+	
+	/**
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="relationid")
+	private Relation relationid;
+	**/
 	/**
 	 * @return the id
 	 */

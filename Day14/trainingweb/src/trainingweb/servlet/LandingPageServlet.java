@@ -20,8 +20,8 @@ import trainingweb.service.MemberService;
  * @author admi
  *
  */
-@WebServlet("/memberServlet")
-public class MemberServlet extends HttpServlet {
+@WebServlet("/index")
+public class LandingPageServlet extends HttpServlet {
 
 	/**
 	 * 
@@ -32,22 +32,7 @@ public class MemberServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		/**
-		int employeeId = Integer.parseInt(req.getParameter("employeeId"));
-		employeeService.removeEmployee(employeeId);
-
-		List<Employee> allEmployees = employeeService.findAllEmployees();
-		req.setAttribute("allEmployees", allEmployees);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("employee.jsp");
-		dispatcher.forward(req, resp);
-		
-		
-		int memberId =  Integer.parseInt(req.getParameter("memeberId"));
-		**/
-		req.getParameter("id");
-		List<Member> allMembers = memberService.findAllMembers();
-		req.setAttribute("allMembers", allMembers); 
-		RequestDispatcher dispatcher =  req.getRequestDispatcher("member.jsp");
+		RequestDispatcher dispatcher =  req.getRequestDispatcher("example.jsp");
 		dispatcher.forward(req, resp);
 		
 	}
