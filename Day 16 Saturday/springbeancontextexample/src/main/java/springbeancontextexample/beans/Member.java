@@ -11,6 +11,19 @@ public class Member {
 	
 	private int id;
 	private String memberName;
+	/**
+	 * @param id
+	 * @param memberName
+	 */
+	public Member(int id, String memberName) {
+		super();
+		this.id = id;
+		this.memberName = memberName;
+	}
+	
+	public Member() {
+		
+	}
 	public int getId() {
 		return id;
 	}
@@ -22,6 +35,11 @@ public class Member {
 	}
 	public void setMemberName(String memberName) {
 		this.memberName = memberName;
+	}
+	
+	
+	public void displayMessage() {
+		System.out.println("Member information--"+id + "----"+memberName);
 	}
 
 }
