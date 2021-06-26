@@ -30,13 +30,11 @@ public class MainApp {
 		//System.out.println(member2);
 		//System.out.println(member3);
 		
-		/**Messages prop = (Messages)context.getBean("msgproperties");
-		System.out.println(prop.getMsgname());
-		System.out.println(prop.getMsgid());
-		**/
-		// Using ResourceBundle trying to read properties
+		
+		// Using ResourceBundle trying to read properties for internationalization
 		String message = context.getMessage("member.name", null, Locale.US);
-        
+		String messagefr = context.getMessage("member.name", null, Locale.FRANCE);
+		System.out.println(messagefr);
         System.out.println(message);
         
         //Using PropertyPlaceHolderConfigurer
