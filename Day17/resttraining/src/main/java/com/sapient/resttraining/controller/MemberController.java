@@ -45,8 +45,8 @@ public class MemberController {
 	  @GetMapping("/members/{id}")
 	  public Optional<Member> getMembersById(@PathVariable Integer id) {
 		  Optional<Member> member = memberservice.getMembersById(id);
-				  if(member!= null) {
-					  return null;
+				  if(!member.isEmpty()) {
+					  return member;
 				  }else
 					  throw new MemberNotFoundException(id);
 		  
