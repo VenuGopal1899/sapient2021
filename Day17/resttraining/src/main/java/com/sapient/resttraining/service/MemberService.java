@@ -4,6 +4,7 @@
 package com.sapient.resttraining.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,7 @@ import com.sapient.resttraining.repository.MemberRepository;
  */
 @Service
 public class MemberService {
+	
 	private MemberRepository memberrepository;
 
 	public List<Member> findAllMembers() {
@@ -28,6 +30,12 @@ public class MemberService {
 		// TODO Auto-generated method stub
 		
 		return newMember;
+	}
+
+	public Optional<Member> getMembersById(Integer id) {
+		// TODO Auto-generated method stub
+		Optional<Member> member =memberrepository.findById(id);
+		return member;
 	}
 	
 	

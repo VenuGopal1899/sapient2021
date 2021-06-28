@@ -4,6 +4,7 @@
 package com.sapient.resttraining.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sapient.resttraining.entity.Member;
+import com.sapient.resttraining.exception.MemberNotFoundException;
 import com.sapient.resttraining.service.MemberService;
 
 /**
@@ -38,6 +40,15 @@ public class MemberController {
 		  return "Hello How are you?";
 	  }
 
+	  @GetMapping("/members/{id}")
+	  public Optional<Member> getMembersById(@RequestBody Member newEmployee, @PathVariable Integer id) {
+		  Optional<Member> member = memberservice.getMembersById(id);
+				  if(member!= null) {
+					  return null;
+				  }else
+				  throw new MemberNotFoundException(id);
+		  
+	  }
 	  
 
 
