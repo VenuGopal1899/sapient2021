@@ -22,4 +22,13 @@ public class MemberNotFoundAdvice {
 	String memberNotFoundHandler(MemberNotFoundException ex) {
 		return ex.getMessage();
 	}
+	
+	
+	@ResponseBody
+	@ExceptionHandler(MemberUpdateFailedException.class)
+	@ResponseStatus(HttpStatus.NOT_MODIFIED)
+	String memberUpdationFailed(MemberUpdateFailedException ex){
+		return ex.getMessage();
+		
+	}
 }

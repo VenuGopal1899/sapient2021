@@ -6,6 +6,7 @@ package com.sapient.resttraining.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sapient.resttraining.entity.Member;
@@ -18,6 +19,7 @@ import com.sapient.resttraining.repository.MemberRepository;
 @Service
 public class MemberService {
 	
+	@Autowired
 	private MemberRepository memberrepository;
 
 	public List<Member> findAllMembers() {
