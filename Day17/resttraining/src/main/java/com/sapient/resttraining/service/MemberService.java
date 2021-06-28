@@ -30,7 +30,7 @@ public class MemberService {
 
 	public Member saveNewMember(Member newMember) {
 		// TODO Auto-generated method stub
-		
+		Member member = memberrepository.save(newMember);
 		return newMember;
 	}
 
